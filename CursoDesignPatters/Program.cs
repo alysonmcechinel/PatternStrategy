@@ -1,6 +1,6 @@
 ﻿namespace CursoDesignPatters
 {
-    /*class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -20,21 +20,6 @@
 			calculador.RealizarCalculo(orcamento, iss);
 
 			Console.ReadKey();
-		}
-	}*/
-
-	
-
-	class Exec1
-	{
-		static void Main(String[] args)
-		{
-			Orcamento reforma = new Orcamento(500);
-			//Orcamento reforma = new Orcamento(1500);
-			//Orcamento reforma = new Orcamento(4000);
-
-			Imposto novoImposto = new ICCC();
-			Console.WriteLine(novoImposto.Calcula(reforma));
 		}
 	}
 }

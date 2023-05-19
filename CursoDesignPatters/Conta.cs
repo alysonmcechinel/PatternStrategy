@@ -8,11 +8,12 @@ namespace CursoDesignPatters
 {
 	public class Conta
 	{
+        public double Valor { get; set; }
+
         public Conta(double valor)
         {
             this.Valor = valor;
         }
 
-        public double Valor { get; set; }
     }
 }

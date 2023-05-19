@@ -4,22 +4,24 @@
     {
         static void Main(string[] args)
         {
+			Console.WriteLine("Qual seu valor investido?");
+			double valorInvestido = Convert.ToDouble(Console.ReadLine());
+			Conta conta = new Conta(valorInvestido);
 
-            Imposto iss = new ISS();
-			Imposto icms = new ICMS();
-			//Imposto iccc = new ICCC();
-			//calculador.RealizarCalculo(orcamento, iccc);
+            Investimentos conservador = new Conservador();
+            Investimentos moderado = new Moderado();
+            Investimentos arrojado = new Arrojado();
 
-			Console.WriteLine("escreva o valor total do orçamento");
-			double total = Convert.ToDouble(Console.ReadLine());
+            RealizadorDeInvestimentos investimento = new RealizadorDeInvestimentos();
 
-			Orcamento orcamento = new Orcamento(total);
-			CalculadorDeImpostos calculador = new CalculadorDeImpostos();
+            investimento.CalcInvestimento(conta, conservador);
+            Console.WriteLine("----------------");
+            investimento.CalcInvestimento(conta, moderado);
+            Console.WriteLine("----------------");
+            investimento.CalcInvestimento(conta, arrojado);
+            
 
-			calculador.RealizarCalculo(orcamento, icms);
-			calculador.RealizarCalculo(orcamento, iss);
-
-			Console.ReadKey();
+            Console.ReadKey();
 		}
 	}
 }

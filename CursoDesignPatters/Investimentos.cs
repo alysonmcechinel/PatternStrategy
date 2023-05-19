@@ -8,6 +8,6 @@ namespace CursoDesignPatters
 {
 	public interface Investimentos
 	{
-		double CalcInvestimento(Conta conta);
+		double RetonoInvestido(Conta conta);
 	}
 }
